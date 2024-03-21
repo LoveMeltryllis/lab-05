@@ -6,3 +6,8 @@
 *.Rproj
 _*
 cite-packages.R
+
+# Ignore data files
+
+data/original/swda/
+data/original/swda.tar.gz

@@ -4,7 +4,17 @@ author: "Linzhuo Li"
 format: html
 ---
 
-## Data description 
+<!--
+Overall: Great job, Linzhuo. You are really stepping it up in your labs. :) In this lab, the code works. Which is great. I still want to remind you that we use Quarto so we can add documentation of our steps as part of the same document that we use to perform the processing steps. So keep that in mind.
+
+
+A side note. For files/ folders we do not have permission to share, we willl use the .gitignore file to ignore them. So for example, in your code the data is written to the `data/original/swda` folder. Since we cannot share this data legally, we add this path to the .gitignore file. I've done this for you, so take a look at the .gitignore file in your repository.
+
+-->
+
+
+## Data description
+
 <!--
 the nature of the data
 the source of the data
@@ -13,12 +23,14 @@ the format of the data
 the license of the data
 -->
 
-The data that I'm downloading is the
-This corpus is a set of 
+<!-- It would be good to actually complete this description in full prose. -->
 
-The data is in an archieved file on the 
+The data that I'm downloading is the
+This corpus is a set of
+
+The data is in an archieved file on the
 [Here]()
-in this case, I'm going to 
+in this case, I'm going to
 
 
 
@@ -33,6 +45,8 @@ library(fs)
 ```
 
 
+<!-- This code looks good. Nice job. -->
+
 ```{r}
 file_url <-"https://catalog.ldc.upenn.edu/docs/LDC97S62/swb1_dialogact_annot.tar.gz"
 dest_file <- "../data/original/swda.tar.gz"
@@ -40,8 +54,13 @@ dest_file <- "../data/original/swda.tar.gz"
 download.file(url=file_url, destfile = dest_file)
 ```
 
-Now the file is at 
+<!-- Again, full description is good to have in your QMD documents. -->
+
+Now the file is at
 Since it is archived file, I will need to unarchive it. It's extension is . So I will use the
+
+
+<!-- This also is good code. -->
 
 ```{r}
 #| label: unarchive-test
@@ -51,14 +70,19 @@ Since it is archived file, I will need to unarchive it. It's extension is . So I
 untar(tarfile = "../data/original/swda.tar.gz", exdir = "../data/original/swda")
 ```
 
-
->--
 ## Assessing my progress
+
+<!-- The code in your lab works. There is a another step you could add, however. You could add a control statement to check to see if the data is already downloaded and if so, then skip the download process. This step is a bit more advanced -but good to know that you can do this. -->
+
 I learned how to investigate data sources.
 I did not found anything chanllenges in this lab as long as I follow it step by step.
-{r} 
+
+<!-- Great. -->
 
 I consulted [click here](https://qtalr.github.io/qtalrkit/articles/recipe-5.html)
+
+<!-- We will get to the actual analysis of datasets in a few chapters. Then we will actually get to see more interesting things about langage. These preparation steps are just so that we know our the quality of our dataset is good and that we have the necessary variables/ attributes to conduct the analysis. -->
+
 I would like to learn more about how to analyze data through rstudio to show all aspectes of it.
 
 
