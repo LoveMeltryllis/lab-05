@@ -1,0 +1,64 @@
+---
+title: "Lab 05"
+author: "Linzhuo Li"
+format: html
+---
+
+## Data description 
+<!--
+the nature of the data
+the source of the data
+the acquisition strategy that will be used
+the format of the data
+the license of the data
+-->
+
+The data that I'm downloading is the
+This corpus is a set of 
+
+The data is in an archieved file on the 
+[Here]()
+in this case, I'm going to 
+
+
+
+```{r}
+#| label: setup-packages
+#| message: false
+
+
+# load package
+library(dplyr)
+library(fs)
+```
+
+
+```{r}
+file_url <-"https://catalog.ldc.upenn.edu/docs/LDC97S62/swb1_dialogact_annot.tar.gz"
+dest_file <- "../data/original/swda.tar.gz"
+
+download.file(url=file_url, destfile = dest_file)
+```
+
+Now the file is at 
+Since it is archived file, I will need to unarchive it. It's extension is . So I will use the
+
+```{r}
+#| label: unarchive-test
+
+# untar(tarfile = "../data/original/swda.tar.gz, exdir")
+
+untar(tarfile = "../data/original/swda.tar.gz", exdir = "../data/original/swda")
+```
+
+
+>--
+## Assessing my progress
+I learned how to investigate data sources.
+I did not found anything chanllenges in this lab as long as I follow it step by step.
+{r} 
+
+I consulted [click here](https://qtalr.github.io/qtalrkit/articles/recipe-5.html)
+I would like to learn more about how to analyze data through rstudio to show all aspectes of it.
+
+
